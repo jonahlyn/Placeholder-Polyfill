@@ -35,7 +35,7 @@
   <script>
   
   $(function(){
-  	$(':text').placeholderFix();
+  	$(':text').placeholderFix({'color':'#c9f0fd'});
   });
   
   </script>
@@ -90,11 +90,29 @@
       
       
       </p>
+      
+      
+      <h2>Options</h2>
+      <p>You can optionally set a default color for the placeholder text.</p>
+      <p>
+      <code><pre>
+  
+  $(function(){
+  	$(&#39;:text&#39;).placeholderFix({&#39;color&#39;:&#39;#c9f0fd&#39;});
+  });
+      
+      </pre></code>
+      
+      
+      </p>      
+      
+      
     
       <h2>Demo</h2>
       <p>
           <form>
-              <input type="text" size="25" placeholder="Enter a Value" name="test" id="test" />
+              <label for="zip">Zip Code:</label>
+              <input type="text" size="25" placeholder="XXXXX" name="zip" id="zip" />
               <input type="submit" value="Submit" />
           </form>
       </p>
