@@ -20,7 +20,7 @@
     h1 .small { font-size: 0.4em; }
     h1 a { text-decoration: none }
     h2 { font-size: 1.5em; color: #360f02; }
-    h3 { text-align: center; color: #360f02; }
+    h3 { text-align: left; color: #360f02; }
     a { color: #360f02; }
     .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
     .download { float: right; }
@@ -70,36 +70,64 @@
     
 
     
-      <h2>Install</h2>
+      <h2>Installation and Usage</h2>
+      
+      <h3>1. Link to the Files</h3>
+      
       <p>
       <code><pre>
       
-  &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&gt;
-  &lt;/script&gt;
-  &lt;script src=&quot;jquery.placeholderfix.js&quot;&gt;&lt;/script&gt;
-  
-  &lt;script&gt;
-  
-  $(function(){
-  	$(&#39;:text&#39;).placeholderFix();
-  });
-  
-  &lt;/script&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&gt;
+&lt;/script&gt;
+&lt;script src=&quot;jquery.placeholderfix.js&quot;&gt;&lt;/script&gt;
       
       </pre></code>
       
+      </p>
+      
+      <h3>2. Add Markup</h3>
+            
+      <p>
+      <code><pre>
+      
+&lt;form&gt;
+    &lt;label for=&quot;zip&quot;&gt;Zip Code:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; size=&quot;25&quot; placeholder=&quot;XXXXX&quot; name=&quot;zip&quot; id=&quot;zip&quot; /&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+&lt;/form&gt;
+      
+      </pre></code>
       
       </p>
       
+      <h3>3. Hookup the Plugin</h3>
       
-      <h2>Options</h2>
+      
+      <p>
+      <code><pre>
+  
+&lt;script&gt;
+  
+$(function(){
+  $(&#39;:text&#39;).placeholderFix();
+});
+  
+&lt;/script&gt;
+      
+      </pre></code>
+      
+      </p>      
+      
+      
+      
+      <h3>4. Set Options if Needed</h3>
       <p>You can optionally set a default color for the placeholder text.</p>
       <p>
       <code><pre>
   
-  $(function(){
-  	$(&#39;:text&#39;).placeholderFix({&#39;color&#39;:&#39;#c9f0fd&#39;});
-  });
+$(function(){
+  $(&#39;:text&#39;).placeholderFix({&#39;color&#39;:&#39;#c9f0fd&#39;});
+});
       
       </pre></code>
       
