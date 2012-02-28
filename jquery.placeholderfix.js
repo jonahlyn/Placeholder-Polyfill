@@ -1,7 +1,8 @@
 /**
  * Plug-in: placeholderFix
- * @author: jonahlyn@unm.edu
+ * @author: jgilstrap@gmail.com
  * PolyFill for HTML5 placeholder attribute.
+ * http://jonahlyn.github.com/Placeholder-Polyfill
  */
 (function($){
   
@@ -12,19 +13,20 @@
         return this.each(function(){
             
             var $el = $(this),
-                  msg = $el.attr('placeholder')
+                  msg = $el.attr('placeholder'),
                   origColor = $el.css('color');
 
+            // Check if browser does not support placeholder attribute natively.
             if(!('placeholder' in document.createElement("input"))) {
             
                 $el.val(msg).css('color',opts.color);
             
                 $el.focus(function(){
-                    if ($el.val() == msg){
+                    if ($el.val() === msg){
                         $el.val('').css('color',origColor);
                     }
                 }).blur(function(){
-                    if($el.val() == ''){
+                    if($el.val() === ''){
                         $el.val(msg).css('color',opts.color);
                     }
                 });
