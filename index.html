@@ -28,6 +28,19 @@
     hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
     .footer { text-align:center; padding-top:30px; font-style: italic; }
   </style>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="jquery.placeholderfix.js"></script>
+  
+  <script>
+  
+  $(function(){
+  	$(':text').placeholderFix();
+  });
+  
+  </script>
+  
+  
 </head>
 
 <body>
@@ -58,22 +71,45 @@
 
     
       <h2>Install</h2>
-      <p><script src="jquery.placeholderfix.js"></script>
-
-
-$(':text').placeholderFix();</p>
+      <p>
+      <code><pre>
+      
+  &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&gt;
+  &lt;/script&gt;
+  &lt;script src=&quot;jquery.placeholderfix.js&quot;&gt;&lt;/script&gt;
+  
+  &lt;script&gt;
+  
+  $(function(){
+  	$(&#39;:text&#39;).placeholderFix();
+  });
+  
+  &lt;/script&gt;
+      
+      </pre></code>
+      
+      
+      </p>
     
-
+      <h2>Demo</h2>
+      <p>
+          <form>
+              <input type="text" size="25" placeholder="Enter a Value" name="test" id="test" />
+              <input type="submit" value="Submit" />
+          </form>
+      </p>
     
 
     
       <h2>Authors</h2>
-      <p>Jonahlyn (jgilstrap@gmail.com)<br/>      </p>
+      <p>Jonahlyn (jgilstrap@gmail.com)
+<br/>      </p>
     
 
     
       <h2>Contact</h2>
-      <p>Jonahlyn (jonahlyn@gmail.com)<br/>      </p>
+      <p>Jonahlyn (jonahlyn@gmail.com)
+<br/>      </p>
     
 
     <h2>Download</h2>
