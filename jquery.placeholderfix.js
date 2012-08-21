@@ -18,8 +18,10 @@
 
             // Check if browser does not support placeholder attribute natively.
             if(!('placeholder' in document.createElement("input"))) {
-            
-                $el.val(msg).css('color',opts.color);
+              
+                if ($el.val() === '') {
+                  $el.val(msg).css('color',opts.color);
+                }
             
                 $el.focus(function(){
                     if ($el.val() === msg){
@@ -37,7 +39,7 @@
     };
     
     $.fn.placeholderFix.defaults = { 
-        'color': '#6C6C6C' // muted color for default state
+        'color': '#777777' // muted color for default state
     };
     
     
